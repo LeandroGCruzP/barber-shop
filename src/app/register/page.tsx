@@ -4,7 +4,7 @@ import Form from "next/form";
 import Link from "next/link";
 import { useState } from "react";
 import { Divider } from "~/components/Divider";
-import LinkBackIcon from "~/components/icons/link-back-icon";
+import { Header } from "~/components/Header";
 import LinkIcon from "~/components/icons/link-icon ";
 import { Routes } from "~/const/routes-const";
 
@@ -23,26 +23,19 @@ export default function Register() {
   }
 
   return (
-    <div className="bg-background h-screen flex flex-col justify-between py-2 px-4 gap-8">
-      <header className="flex flex-col w-full gap-2">
-        <Link
-          href={Routes.LANDING}
-          className="h-10 w-10 bg-background border-2 border-background rounded-full text-2xl flex items-center justify-center hover:brightness-90 focus:brightness-90 transition text-white text-shadow-md outline-none"
-        >
-          <LinkBackIcon className="rotate-90" width={35} height={35} />
-        </Link>
+    <main className="flex flex-col min-h-[calc(100vh-4rem)]">
+      <Header linkBack={Routes.LANDING} />
 
+      <section className="flex flex-col gap-8 flex-1">
         <div className="flex flex-col justify-start w-full gap-2 px-3 max-w-lg m-auto">
           <h1 className="text-5xl font-bold">
-            Sign Up
+            Register
           </h1>
 
           <p className="text-2xl">Create an account</p>
         </div>
-      </header>
 
-      <main className="px-3 w-full max-w-lg m-auto">
-        <Form action={e => onSubmit(e)} className="flex flex-col gap-8  w-full">
+        <Form action={e => onSubmit(e)} className="flex flex-col gap-8 w-full max-w-lg m-auto">
           <div className="flex flex-col gap-4">
             <input
               name="username"
@@ -82,22 +75,21 @@ export default function Register() {
             type="submit"
             className="font-semibold px-16 h-16 bg-primary border-2 border-primary rounded-full text-2xl flex items-center justify-center hover:brightness-90 focus:brightness-90 transition text-white text-shadow-md outline-none"
           >
-            Continue
+            Create Account
           </button>
         </Form>
-      </main>
 
-      <footer>
         <Divider />
+      </section>
 
-        <div className="flex flex-col gap-2 justify-center items-center flex-1 p-8">
-          <p className="text-lg">Already have an account</p>
-          <Link href={Routes.LOGIN} className="text-lg flex items-center gap-1 font-semibold group hover:brightness-125 focus:brightness-125 transition outline-none">
-            Login
-            <LinkIcon width={15} height={15} fill="white" className="group-hover:animate-bounce group-focus:animate-bounce" />
-          </Link>
-        </div>
+
+      <footer className="flex flex-col justify-center items-center pt-8">
+        <p className="text-lg">Already have an account</p>
+        <Link href={Routes.LOGIN} className="text-lg flex items-center gap-1 font-semibold group hover:brightness-125 focus:brightness-125 transition outline-none">
+          Login
+          <LinkIcon width={15} height={15} fill="white" className="group-hover:animate-bounce group-focus:animate-bounce" />
+        </Link>
       </footer>
-    </div>
+    </main>
   );
 }

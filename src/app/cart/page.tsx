@@ -34,8 +34,8 @@ export default function Cart() {
               <Divider />
 
               <div className="flex justify-between text-xl w-full">
-                <p>R$</p>
-                <p>{total.toFixed(2)}</p>
+                <p>Total</p>
+                <p>R$ {total.toFixed(2)}</p>
               </div>
             </div>
           </div>

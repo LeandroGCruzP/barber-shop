@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CartProvider } from "~/hooks/CartContext";
@@ -26,11 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background p-8`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background p-8 max-w-5xl mx-auto`}
       >
-        <CartProvider>
-          {children}
-        </CartProvider>
+        <AnimatePresence mode="wait">
+          <CartProvider>
+            {children}
+          </CartProvider>
+        </AnimatePresence>
       </body>
     </html>
   );
