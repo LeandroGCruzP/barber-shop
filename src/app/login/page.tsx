@@ -19,7 +19,7 @@ export default function Login() {
       password: event.get('password')
     }
 
-    alert(data.email)
+    console.log(`user ${data.email} logged in`)
 
     router.push('/home')
   }

@@ -36,14 +36,14 @@ export default function AddToCartButton({ item }: AddToCartButtonProps) {
     <>
       {hasItemInCart ? (
         <button
-          className="bg-red-500 p-4 rounded-xl"
+          className="bg-red-500 p-2 md:p-4 rounded-xl flex justify-center flex-1"
           onClick={() => removeItem()}
         >
           <MinusIcon width={35} height={35} />
         </button>
       ) : (
         <button
-          className="bg-primary p-4 rounded-xl"
+          className="bg-primary p-2 md:p-4 rounded-xl flex justify-center flex-1"
           onClick={() => addItem()}
         >
           <PlusIcon width={35} height={35} />
