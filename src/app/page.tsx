@@ -1,9 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion';
-import Image from "next/image";
-import Link from "next/link";
-import { Routes } from "~/const/routes-const";
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { Button } from '~/components/Button'
 
 export default function Landing() {
   return (
@@ -21,21 +20,24 @@ export default function Landing() {
         </div>
 
         <main className="flex flex-col gap-8 w-full max-w-lg m-auto">
-          <Link
+          {/* <Link
             href={Routes.LOGIN}
             className="font-semibold px-16 h-16 bg-primary border-2 border-primary rounded-full text-2xl flex items-center justify-center hover:brightness-90 focus:brightness-90 transition text-white text-shadow-md"
           >
             Login
-          </Link>
+          </Link> */}
 
-          <Link
+          {/* <Link
             href={Routes.REGISTER}
             className="font-semibold px-16 h-16 border-2 border-secondary rounded-full text-2xl flex items-center justify-center hover:brightness-125 focus:brightness-125 transition text-white text-shadow-md outline-none"
           >
             Create Account
-          </Link>
+          </Link> */}
+
+          <Button>Login</Button>
+          <Button variant="outline">Create Account</Button>
         </main>
       </section>
     </main>
-  );
+  )
 }

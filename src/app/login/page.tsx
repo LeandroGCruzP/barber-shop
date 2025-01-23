@@ -5,6 +5,7 @@ import Form from "next/form";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { Button } from '~/components/Button';
 import { Header } from "~/components/Header";
 import { Routes } from "~/const/routes-const";
 
@@ -67,6 +68,7 @@ export default function Login() {
           >
             Sign In
           </button>
+          <Button text='Sign In' />
         </Form>
       </section>
     </main>
