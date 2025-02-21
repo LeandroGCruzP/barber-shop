@@ -51,7 +51,7 @@ export default function Login() {
               type="email"
               placeholder="Email"
               // required
-              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow-md hover:brightness-125 focus:brightness-125"
+              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow hover:brightness-125 focus:brightness-125"
               autoFocus
             />
             <input
@@ -59,7 +59,7 @@ export default function Login() {
               type={inputType}
               placeholder="Password"
               // required
-              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow-md hover:brightness-125 focus:brightness-125"
+              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow hover:brightness-125 focus:brightness-125"
               onFocus={() => setInputType('text')}
               onBlur={() => setInputType('password')}
             />
@@ -67,7 +67,7 @@ export default function Login() {
 
           <button
             type="submit"
-            className="flex h-16 items-center justify-center rounded-full border-2 border-primary bg-primary px-16 text-2xl font-semibold text-white outline-none transition text-shadow-md hover:brightness-90 focus:brightness-90"
+            className="flex h-16 items-center justify-center rounded-full border-2 border-primary bg-primary px-16 text-2xl font-semibold text-white outline-none transition text-shadow hover:brightness-90 focus:brightness-90"
           >
             Sign In
           </button>

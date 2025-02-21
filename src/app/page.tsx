@@ -22,14 +22,14 @@ export default function Landing() {
         <main className="m-auto flex w-full max-w-lg flex-col gap-8">
           {/* <Link
             href={Routes.LOGIN}
-            className="font-semibold px-16 h-16 bg-primary border-2 border-primary rounded-full text-2xl flex items-center justify-center hover:brightness-90 focus:brightness-90 transition text-white text-shadow-md"
+            className="font-semibold px-16 h-16 bg-primary border-2 border-primary rounded-full text-2xl flex items-center justify-center hover:brightness-90 focus:brightness-90 transition text-white text-shadow"
           >
             Login
           </Link> */}
 
           {/* <Link
             href={Routes.REGISTER}
-            className="font-semibold px-16 h-16 border-2 border-secondary rounded-full text-2xl flex items-center justify-center hover:brightness-125 focus:brightness-125 transition text-white text-shadow-md outline-none"
+            className="font-semibold px-16 h-16 border-2 border-secondary rounded-full text-2xl flex items-center justify-center hover:brightness-125 focus:brightness-125 transition text-white text-shadow outline-none"
           >
             Create Account
           </Link> */}

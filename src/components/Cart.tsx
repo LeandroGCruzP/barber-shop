@@ -13,7 +13,7 @@ export function Cart() {
   return (
     <Link
       href={Routes.CART}
-      className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-background text-2xl text-white outline-none transition text-shadow-md hover:brightness-90 focus:brightness-90"
+      className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-background text-2xl text-white outline-none transition text-shadow hover:brightness-90 focus:brightness-90"
     >
       <div className="relative">
         <CartIcon width={35} height={35} />

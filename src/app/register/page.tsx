@@ -43,21 +43,21 @@ export default function Register() {
               placeholder="Username"
               // required
               autoFocus
-              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow-md hover:brightness-125 focus:brightness-125"
+              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow hover:brightness-125 focus:brightness-125"
             />
             <input
               name="email"
               type="email"
               placeholder="Email"
               // required
-              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow-md hover:brightness-125 focus:brightness-125"
+              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow hover:brightness-125 focus:brightness-125"
             />
             <input
               name="password"
               type={inputType}
               placeholder="Password"
               // required
-              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow-md hover:brightness-125 focus:brightness-125"
+              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow hover:brightness-125 focus:brightness-125"
               onFocus={() => setInputType('text')}
               onBlur={() => setInputType('password')}
             />
@@ -66,7 +66,7 @@ export default function Register() {
               type={inputType}
               placeholder="Repeat Password"
               // required
-              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow-md hover:brightness-125 focus:brightness-125"
+              className="flex h-16 items-center justify-center rounded-full border-2 border-secondary bg-background-hover px-8 text-2xl text-white outline-none transition text-shadow hover:brightness-125 focus:brightness-125"
               onFocus={() => setInputType('text')}
               onBlur={() => setInputType('password')}
             />
@@ -74,7 +74,7 @@ export default function Register() {
 
           <button
             type="submit"
-            className="flex h-16 items-center justify-center rounded-full border-2 border-primary bg-primary px-16 text-2xl font-semibold text-white outline-none transition text-shadow-md hover:brightness-90 focus:brightness-90"
+            className="flex h-16 items-center justify-center rounded-full border-2 border-primary bg-primary px-16 text-2xl font-semibold text-white outline-none transition text-shadow hover:brightness-90 focus:brightness-90"
           >
             Create Account
           </button>
