@@ -1,6 +1,12 @@
 'use client'
 
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from 'react'
 
 interface CartItem {
   id: string
@@ -10,10 +16,10 @@ interface CartItem {
 }
 
 interface CartContextType {
-  cart: CartItem[]
   addToCart: (item: CartItem) => void
-  removeFromCart: (id: string) => void
+  cart: CartItem[]
   clearCart: () => void
+  removeFromCart: (id: string) => void
   total: number
 }
 
@@ -41,7 +47,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       const existingItem = prevCart.find((i) => i.id === item.id)
       if (existingItem) {
         return prevCart.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i
+          i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i,
         )
       }
       return [...prevCart, item]
@@ -59,7 +65,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, total }}>
+    <CartContext.Provider
+      value={{ addToCart, cart, clearCart, removeFromCart, total }}
+    >
       {children}
     </CartContext.Provider>
   )

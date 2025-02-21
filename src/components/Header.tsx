@@ -8,12 +8,16 @@ import { Cart } from './Cart'
 import LinkBackIcon from './icons/link-back-icon'
 
 interface HeaderProps {
-  linkBack?: Routes
   hasCart?: boolean
+  linkBack?: Routes
   noHasLinkBack?: boolean
 }
 
-export function Header({ noHasLinkBack = false, linkBack, hasCart = false }: HeaderProps) {
+export function Header({
+  hasCart = false,
+  linkBack,
+  noHasLinkBack = false,
+}: HeaderProps) {
   const router = useRouter()
 
   function renderBackButton(): JSX.Element {
@@ -25,7 +29,7 @@ export function Header({ noHasLinkBack = false, linkBack, hasCart = false }: Hea
       return (
         <Link
           href={linkBack}
-          className="h-12 flex items-center hover:brightness-90 focus:brightness-90 transition outline-none"
+          className="flex h-12 items-center outline-none transition hover:brightness-90 focus:brightness-90"
           aria-label="Come back to the previous page"
         >
           <LinkBackIcon className="rotate-90" width={35} height={35} />
@@ -35,7 +39,7 @@ export function Header({ noHasLinkBack = false, linkBack, hasCart = false }: Hea
 
     return (
       <button
-        className="h-12 flex items-center hover:brightness-90 focus:brightness-90 transition outline-none"
+        className="flex h-12 items-center outline-none transition hover:brightness-90 focus:brightness-90"
         onClick={() => router.back()}
         aria-label="Come back to the previous page"
       >
@@ -45,7 +49,7 @@ export function Header({ noHasLinkBack = false, linkBack, hasCart = false }: Hea
   }
 
   return (
-    <header className="flex items-center justify-between w-full">
+    <header className="flex w-full items-center justify-between">
       {renderBackButton()}
       {hasCart && <Cart />}
     </header>

@@ -1,9 +1,9 @@
 'use client'
 
-import { Divider } from "~/components/Divider"
-import { Header } from "~/components/Header"
-import { SimpleCardService } from "~/components/SimpleCardService"
-import { useCart } from "~/hooks/CartContext"
+import { Divider } from '~/components/Divider'
+import { Header } from '~/components/Header'
+import { SimpleCardService } from '~/components/SimpleCardService'
+import { useCart } from '~/hooks/CartContext'
 
 export default function Cart() {
   const { cart, total } = useCart()
@@ -11,14 +11,14 @@ export default function Cart() {
   const hasItemsInCart = cart.length > 0
 
   return (
-    <main className="flex flex-col min-h-[calc(100vh-4rem)]">
+    <main className="flex min-h-[calc(100vh-4rem)] flex-col">
       <Header />
 
-      <section className="flex flex-col gap-8 flex-1">
+      <section className="flex flex-1 flex-col gap-8">
         {!hasItemsInCart ? (
           <p className="m-auto">Your cart is empty</p>
         ) : (
-          <div className="mt-8 flex flex-col justify-between flex-1">
+          <div className="mt-8 flex flex-1 flex-col justify-between">
             <div className="flex flex-col gap-8">
               {cart.map((item) => (
                 <SimpleCardService
@@ -33,7 +33,7 @@ export default function Cart() {
             <div className="flex flex-col gap-8">
               <Divider />
 
-              <div className="flex justify-between text-xl w-full">
+              <div className="flex w-full justify-between text-xl">
                 <p>Total</p>
                 <p>R$ {total.toFixed(2)}</p>
               </div>
@@ -44,4 +44,3 @@ export default function Cart() {
     </main>
   )
 }
-

@@ -1,11 +1,11 @@
 'use client'
 
-import Link from "next/link";
-import { Routes } from "~/const/routes-const";
-import { useCart } from "~/hooks/CartContext";
-import { CartIcon } from "./icons/cart-icon";
+import Link from 'next/link'
+import { Routes } from '~/const/routes-const'
+import { useCart } from '~/hooks/CartContext'
+import { CartIcon } from './icons/cart-icon'
 
-export function Cart () {
+export function Cart() {
   const { cart } = useCart()
 
   const hasItemsInCart = cart.length > 0
@@ -13,13 +13,13 @@ export function Cart () {
   return (
     <Link
       href={Routes.CART}
-      className="h-10 w-10 bg-background border-2 border-background rounded-full text-2xl flex items-center justify-center hover:brightness-90 focus:brightness-90 transition text-white text-shadow-md outline-none"
+      className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-background text-2xl text-white outline-none transition text-shadow-md hover:brightness-90 focus:brightness-90"
     >
       <div className="relative">
         <CartIcon width={35} height={35} />
 
         {hasItemsInCart && (
-          <div className="absolute w-5 h-5 flex items-center justify-center bottom-0 p-[0.05rem] bg-red-500 rounded-full text-sm font-semibold">
+          <div className="absolute bottom-0 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 p-[0.05rem] text-sm font-semibold">
             {cart.length}
           </div>
         )}

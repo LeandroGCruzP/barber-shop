@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-export default function Loading () {
+export default function Loading() {
   return (
-    <main className="flex items-center justify-center h-[calc(100vh-4rem)]">
+    <main className="flex h-[calc(100vh-4rem)] items-center justify-center">
       <Image
         src="/splash-icon.svg"
         width="150"

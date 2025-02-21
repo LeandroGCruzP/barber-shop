@@ -36,7 +36,7 @@ export function Button({
     'rounded-full w-full text-white text-2xl font-semibold text-shadow-md px-16 h-16 outline-none whitespace-nowrap transition-all hover:brightness-125 focus:brightness-125'
   const buttonVariants = {
     outline: 'border-2 border-secondary',
-    primary: 'bg-primary'
+    primary: 'bg-primary',
   }
 
   return (

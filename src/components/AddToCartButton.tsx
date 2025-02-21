@@ -1,9 +1,9 @@
 'use client'
 
-import toast, { Toaster } from "react-hot-toast"
-import { useCart } from "~/hooks/CartContext"
-import { MinusIcon } from "./icons/minus-icon"
-import { PlusIcon } from "./icons/plus-icon"
+import toast, { Toaster } from 'react-hot-toast'
+import { useCart } from '~/hooks/CartContext'
+import { MinusIcon } from './icons/minus-icon'
+import { PlusIcon } from './icons/plus-icon'
 
 interface Item {
   id: string
@@ -16,17 +16,17 @@ interface AddToCartButtonProps {
 }
 
 export default function AddToCartButton({ item }: AddToCartButtonProps) {
-  const { addToCart, removeFromCart, cart } = useCart()
+  const { addToCart, cart, removeFromCart } = useCart()
 
-  const hasItemInCart = cart.some(cartItem => cartItem.id === item.id)
+  const hasItemInCart = cart.some((cartItem) => cartItem.id === item.id)
 
-  function addItem () {
+  function addItem() {
     toast.success(`${item.name} added to cart!`)
 
     addToCart({ ...item, quantity: 1 })
   }
 
-  function removeItem () {
+  function removeItem() {
     toast.success(`${item.name} added to cart!`)
 
     removeFromCart(item.id)
@@ -36,23 +36,21 @@ export default function AddToCartButton({ item }: AddToCartButtonProps) {
     <>
       {hasItemInCart ? (
         <button
-          className="bg-red-500 p-2 md:p-4 rounded-xl flex justify-center flex-1"
+          className="flex flex-1 justify-center rounded-xl bg-red-500 p-2 md:p-4"
           onClick={() => removeItem()}
         >
           <MinusIcon width={35} height={35} />
         </button>
       ) : (
         <button
-          className="bg-primary p-2 md:p-4 rounded-xl flex justify-center flex-1"
+          className="flex flex-1 justify-center rounded-xl bg-primary p-2 md:p-4"
           onClick={() => addItem()}
         >
           <PlusIcon width={35} height={35} />
         </button>
       )}
 
-      <Toaster
-        position="bottom-right"
-      />
+      <Toaster position="bottom-right" />
     </>
   )
 }

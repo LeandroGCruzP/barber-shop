@@ -1,8 +1,8 @@
 export enum Routes {
-  LANDING = '/',
-  HOME = '/home',
+  CALENDAR = '/calendar',
   CART = '/cart',
+  HOME = '/home',
+  LANDING = '/',
   LOGIN = '/login',
   REGISTER = '/register',
-  CALENDAR = '/calendar',
 }

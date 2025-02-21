@@ -1,13 +1,13 @@
-import DatePicker from "~/components/DatePicker";
-import { Header } from "~/components/Header";
-import { Routes } from "~/const/routes-const";
+import DatePicker from '~/components/DatePicker'
+import { Header } from '~/components/Header'
+import { Routes } from '~/const/routes-const'
 
-export default function Calendar () {
+export default function Calendar() {
   return (
-    <main className="flex flex-col min-h-[calc(100vh-4rem)]">
+    <main className="flex min-h-[calc(100vh-4rem)] flex-col">
       <Header linkBack={Routes.HOME} hasCart />
 
-      <section className="flex flex-col gap-8 flex-1">
+      <section className="flex flex-1 flex-col gap-8">
         <span className="m-auto">Calendar</span>
 
         <DatePicker />

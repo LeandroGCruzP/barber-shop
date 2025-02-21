@@ -1,21 +1,21 @@
 'use client'
 
-import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { Button } from "~/components/Button"
-import { CardService } from "~/components/CardService"
-import { Divider } from "~/components/Divider"
-import { Header } from "~/components/Header"
-import { Routes } from "~/const/routes-const"
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { Button } from '~/components/Button'
+import { CardService } from '~/components/CardService'
+import { Divider } from '~/components/Divider'
+import { Header } from '~/components/Header'
+import { Routes } from '~/const/routes-const'
 
-export default function Home () {
+export default function Home() {
   const router = useRouter()
 
   return (
-    <main className="flex flex-col min-h-[calc(100vh-4rem)]">
+    <main className="flex min-h-[calc(100vh-4rem)] flex-col">
       <Header noHasLinkBack linkBack={Routes.HOME} hasCart />
 
-      <section className="flex flex-col gap-8 flex-1">
+      <section className="flex flex-1 flex-col gap-8">
         <div className="relative -top-4 flex flex-col items-center gap-2">
           <Image
             src="/profile.svg"

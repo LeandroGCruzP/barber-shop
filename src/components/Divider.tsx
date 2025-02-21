@@ -1,6 +1,6 @@
-export function Divider () {
+export function Divider() {
   return (
-    <div className="flex gap-6 w-full">
+    <div className="flex w-full gap-6">
       <div className="h-[2px] w-full bg-white" />
       <div className="h-[2px] w-full bg-white" />
     </div>
