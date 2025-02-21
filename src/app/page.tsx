@@ -34,8 +34,10 @@ export default function Landing() {
             Create Account
           </Link> */}
 
-          <Button>Login</Button>
-          <Button variant="outline">Create Account</Button>
+          <Button ariaLabel="login button">Login</Button>
+          <Button ariaLabel="create account button" variant="outline">
+            Create Account
+          </Button>
         </main>
       </section>
     </main>

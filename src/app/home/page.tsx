@@ -54,7 +54,12 @@ export default function Home() {
           price={40}
         />
 
-        <Button text="Continue" onClick={() => router.push(Routes.CALENDAR)} />
+        <Button
+          onClick={() => router.push(Routes.CALENDAR)}
+          ariaLabel="continue button"
+        >
+          Continue
+        </Button>
       </section>
     </main>
   )

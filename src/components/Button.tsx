@@ -21,7 +21,7 @@ import clsx from 'clsx'
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  ariaLabel?: string
+  ariaLabel: string
   children: ReactNode
   variant?: 'outline' | 'primary'
 }

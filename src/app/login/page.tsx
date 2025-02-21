@@ -71,7 +71,7 @@ export default function Login() {
           >
             Sign In
           </button>
-          <Button text="Sign In" />
+          <Button ariaLabel="sign in label">Sign In</Button>
         </Form>
       </section>
     </main>
