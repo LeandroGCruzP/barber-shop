@@ -1,4 +1,3 @@
-import DatePicker from '~/components/DatePicker'
 import { Header } from '~/components/Header'
 import { Routes } from '~/const/routes-const'
 
@@ -9,8 +8,6 @@ export default function Calendar() {
 
       <section className="flex flex-1 flex-col gap-8">
         <span className="m-auto">Calendar</span>
-
-        <DatePicker />
       </section>
     </main>
   )
