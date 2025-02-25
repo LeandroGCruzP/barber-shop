@@ -2,43 +2,48 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { Button } from '~/components/Button'
+import { Routes } from '~/const/routes-const'
 
 export default function Landing() {
+  const routes = useRouter()
+
+  function redirect(route: Routes) {
+    routes.push(route)
+  }
+
   return (
-    <main className="flex min-h-[calc(100vh-4rem)] flex-col">
-      <section className="flex flex-1 flex-col gap-8">
-        <div className="m-auto flex justify-center">
+    <main className="flex min-h-[calc(100vh-8rem)] flex-col">
+      <section className="flex flex-1 flex-col gap-4">
+        <div className="m-auto flex h-[calc(100vh/2)] justify-center">
           <motion.div layoutId="splash-image">
             <Image
               src="/splash-icon.svg"
               width={250}
               height={250}
               alt="profile image"
+              className="h-full w-full"
             />
           </motion.div>
         </div>
 
-        <main className="m-auto flex w-full max-w-lg flex-col gap-8">
-          {/* <Link
-            href={Routes.LOGIN}
-            className="font-semibold px-16 h-16 bg-primary border-2 border-primary rounded-full text-2xl flex items-center justify-center hover:brightness-90 focus:brightness-90 transition text-white text-shadow"
+        <div className="m-auto flex w-full max-w-lg flex-col gap-4">
+          <Button
+            ariaLabel="login button"
+            onClick={() => redirect(Routes.LOGIN)}
           >
             Login
-          </Link> */}
+          </Button>
 
-          {/* <Link
-            href={Routes.REGISTER}
-            className="font-semibold px-16 h-16 border-2 border-secondary rounded-full text-2xl flex items-center justify-center hover:brightness-125 focus:brightness-125 transition text-white text-shadow outline-none"
+          <Button
+            ariaLabel="create account button"
+            variant="outline"
+            onClick={() => redirect(Routes.REGISTER)}
           >
             Create Account
-          </Link> */}
-
-          <Button ariaLabel="login button">Login</Button>
-          <Button ariaLabel="create account button" variant="outline">
-            Create Account
           </Button>
-        </main>
+        </div>
       </section>
     </main>
   )
