@@ -1,22 +1,3 @@
-// import clsx from 'clsx'
-// import { HTMLAttributes } from "react"
-
-// interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-//   text: string
-//   outlined?: boolean
-// }
-
-// export function Button ({ text, outlined = false, ...rest }: ButtonProps) {
-//   return (
-//     <button
-//       className="rounded-full w-full bg-primary text-xl text-white font-semibold text-shadow px-16 h-16 outline-none transition hover:brightness-90 focus:brightness-90 md:text-2xl"
-//       {...rest}
-//     >
-//       {text}
-//     </button>
-//   )
-// }
-
 import clsx from 'clsx'
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
