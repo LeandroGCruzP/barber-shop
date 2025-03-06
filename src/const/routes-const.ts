@@ -5,4 +5,5 @@ export enum Routes {
   LANDING = '/',
   LOGIN = '/login',
   REGISTER = '/register',
+  WITHOUT_REGISTER = '/guest',
 }

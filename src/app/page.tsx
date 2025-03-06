@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Button } from '~/components/Button'
+import LinkIcon from '~/components/icons/link-icon '
 import { Routes } from '~/const/routes-const'
 
 export default function Landing() {
@@ -43,6 +45,21 @@ export default function Landing() {
           >
             Create Account
           </Button>
+
+          <div className="flex justify-center">
+            <Link
+              href={Routes.WITHOUT_REGISTER}
+              className="group flex items-center gap-1 text-lg font-semibold outline-none transition hover:brightness-125 focus:brightness-125"
+            >
+              Access without register
+              <LinkIcon
+                width={15}
+                height={15}
+                fill="white"
+                className="group-hover:animate-bounce group-focus:animate-bounce"
+              />
+            </Link>
+          </div>
         </div>
       </section>
     </main>
